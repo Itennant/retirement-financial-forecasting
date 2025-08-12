@@ -65,3 +65,13 @@ Test suites and specifications
 - Use dependency injection for loose coupling
 - Write tests for all business logic
 - Document public APIs and interfaces
+
+## Additional Documentation
+
+For information on development workflow and branching strategy, see:
+- [Development Workflow Documentation (MD)](../docs/09_development_workflow.md)
+- [Development Workflow Documentation (DOCX)](../docs/09_development_workflow.docx)
+
+For cross-platform development setup instructions, see:
+- [Cross-Platform Setup Documentation (MD)](../docs/10_cross_platform_setup.md)
+- [Cross-Platform Setup Documentation (DOCX)](../docs/10_cross_platform_setup.docx)
