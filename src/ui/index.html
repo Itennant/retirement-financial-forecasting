@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Forecasting Application</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Financial Forecasting Application</h1>
+            <nav>
+                <button id="dashboard-btn">Dashboard</button>
+                <button id="scenarios-btn">Scenarios</button>
+                <button id="reports-btn">Reports</button>
+                <button id="billing-btn">Billing</button>
+                <button id="settings-btn">Settings</button>
+            </nav>
+        </header>
+        
+        <main id="main-content">
+            <div id="dashboard-view" class="view active">
+                <h2>Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h3>Financial Overview</h3>
+                        <p>Welcome to your financial forecasting dashboard</p>
+                    </div>
+                    <div class="card">
+                        <h3>Recent Scenarios</h3>
+                        <p>No scenarios created yet</p>
+                    </div>
+                    <div class="card">
+                        <h3>Upcoming Payments</h3>
+                        <p>No upcoming payments</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="scenarios-view" class="view">
+                <h2>Financial Scenarios</h2>
+                <div id="scenarios-list">
+                    <!-- Scenarios will be loaded here -->
+                </div>
+                <button id="new-scenario-btn">Create New Scenario</button>
+            </div>
+            
+            <div id="reports-view" class="view">
+                <h2>Reports</h2>
+                <div id="reports-list">
+                    <!-- Reports will be loaded here -->
+                </div>
+            </div>
+            
+            <div id="billing-view" class="view">
+                <h2>Billing & Payments</h2>
+                <div id="billing-content">
+                    <!-- Billing content will be loaded here -->
+                </div>
+            </div>
+            
+            <div id="settings-view" class="view">
+                <h2>Settings</h2>
+                <div id="settings-content">
+                    <!-- Settings will be loaded here -->
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

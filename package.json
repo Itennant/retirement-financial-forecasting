@@ -1,0 +1,60 @@
+{
+  "name": "financial-forecasting-app",
+  "version": "1.0.0",
+  "description": "Retirement financial forecasting application with AI integration",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron src/main.js",
+    "dev": "NODE_ENV=development electron src/main.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "build": "electron-builder",
+    "dist": "electron-builder --mac --win --linux"
+  },
+  "keywords": [
+    "financial",
+    "forecasting",
+    "retirement",
+    "ai",
+    "desktop",
+    "electron"
+  ],
+  "author": "Financial Forecasting Team",
+  "license": "MIT",
+  "dependencies": {
+    "@langchain/community": "^0.3.50",
+    "@langchain/core": "^0.3.68",
+    "@langchain/openai": "^0.6.7",
+    "@langchain/textsplitters": "^0.1.0",
+    "axios": "^1.11.0",
+    "electron": "^13.1.7",
+    "knex": "^0.95.11",
+    "langchain": "^0.3.30",
+    "lodash": "^4.17.21",
+    "paypal-rest-sdk": "^1.8.1",
+    "sqlite3": "^5.0.2",
+    "stripe": "^8.174.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^22.11.7",
+    "jest": "^27.0.6"
+  },
+  "build": {
+    "appId": "com.financial.forecasting",
+    "productName": "Financial Forecasting Application",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.finance"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}

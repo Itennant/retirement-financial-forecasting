@@ -1,0 +1,42 @@
+{
+  "langchain-financial": {
+    "enabled": true,
+    "modelName": "gpt-4",
+    "temperature": 0.7,
+    "maxTokens": 2000,
+    "timeout": 30000
+  },
+  "langchain-chatbot": {
+    "enabled": true,
+    "modelName": "gpt-4",
+    "temperature": 0.8,
+    "maxTokens": 1500,
+    "timeout": 30000
+  },
+  "langchain-analysis": {
+    "enabled": true,
+    "modelName": "gpt-4",
+    "temperature": 0.3,
+    "maxTokens": 3000,
+    "timeout": 45000
+  },
+  "langchain-recommendation": {
+    "enabled": true,
+    "modelName": "gpt-4",
+    "temperature": 0.5,
+    "maxTokens": 2500,
+    "timeout": 35000
+  },
+  "flowise-default": {
+    "enabled": false,
+    "baseUrl": "http://localhost:3000",
+    "timeout": 30000,
+    "defaultOptions": {}
+  },
+  "n8n-default": {
+    "enabled": false,
+    "baseUrl": "http://localhost:5678",
+    "timeout": 30000,
+    "defaultInput": {}
+  }
+}
