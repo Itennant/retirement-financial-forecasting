@@ -13,11 +13,15 @@ const config = {
     host: process.env.HOST || 'localhost'
   },
   database: {
-    client: 'sqlite3',
+    client: process.env.DATABASE_CLIENT || 'sqlite3',
     connection: {
       filename: process.env.DATABASE_PATH || './data/app.db'
     },
-    useNullAsDefault: true
+    useNullAsDefault: true,
+    supabase: {
+      url: process.env.SUPABASE_URL || '',
+      key: process.env.SUPABASE_KEY || ''
+    }
   },
   payment: {
     gateways: {
@@ -39,4 +43,4 @@ const config = {
   }
 };
 
-module.exports = config;
+export default config;

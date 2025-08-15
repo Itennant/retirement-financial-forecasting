@@ -22,6 +22,11 @@ Progress tracking documents serve several key purposes:
   - Testing results and issues
   - Resource requirements
   - Timeline and milestones
+- **Calculation Agent Integration** (`16_calculation_agent_integration.md`)
+  - Complex calculation capabilities integration
+  - Wolfram Alpha and Python integration
+  - Natural Language Processing interface
+  - Security and performance considerations
 
 ### Architecture Documents
 - **AI-Centric Architecture** (`01_ai_centric_architecture.md`)

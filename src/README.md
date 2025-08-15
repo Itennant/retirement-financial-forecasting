@@ -7,8 +7,8 @@ This directory contains the source code for the retirement financial forecasting
 ### `src/core/`
 Core application logic and business services
 - `services/` - Business logic services
+  - `database.service.js` - Database service with Supabase integration
 - `controllers/` - Request handlers and application controllers  
-- `interfaces/` - Application interfaces and contracts
 
 ### `src/agents/`
 AI agent system implementation
@@ -65,6 +65,39 @@ Test suites and specifications
 - Use dependency injection for loose coupling
 - Write tests for all business logic
 - Document public APIs and interfaces
+
+## Database Service and Supabase Integration
+
+The application now includes a `DatabaseService` that provides seamless integration with both SQLite (default) and Supabase (development mode). This service abstracts database operations and automatically switches between database backends based on environment configuration.
+
+### Key Features
+- Automatic database switching based on environment variables
+- Unified API for database operations (select, insert, update, delete)
+- Support for raw SQL queries
+- Supabase-specific features (real-time subscriptions, authentication, storage)
+
+### Usage
+```javascript
+const DatabaseService = require('./core/services/database.service');
+const config = require('./config/settings/app.config');
+
+// Initialize database service
+const db = new DatabaseService(config);
+
+// Perform database operations
+const users = await db.select('users', { active: true });
+const newUser = await db.insert('users', { name: 'John Doe', email: 'john@example.com' });
+```
+
+### Configuration
+To use Supabase in development mode, set the following environment variables:
+```bash
+export DATABASE_CLIENT=supabase
+export SUPABASE_URL=your_supabase_project_url
+export SUPABASE_KEY=your_supabase_api_key
+```
+
+For detailed setup instructions, see [Supabase Integration Guide](../docs/17_supabase_integration.md).
 
 ## Additional Documentation
 

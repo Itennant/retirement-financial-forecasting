@@ -86,6 +86,22 @@ This document tracks the progress of agent system development for the financial 
    - Verify Flowise integration with sample chatflows (requires Flowise server)
    - Test n8n workflows with automation examples (requires n8n server)
 
+3. **Calculation Agent Framework**
+   - Implement base calculation agent class extending BaseAgent
+   - Set up configuration management for calculation agents
+   - Establish development environment for Python execution
+
+### Medium Term (1-3 months) - Target Completion: 06/09/2025
+1. **Wolfram Alpha Integration**
+   - Implement Wolfram Alpha API client
+   - Create natural language to Wolfram syntax converter
+   - Develop result parsing and formatting for financial context
+
+2. **Python Environment Setup**
+   - Configure secure Python execution environment
+   - Implement Python script generation from requests
+   - Create result parsing and formatting for financial data
+
 3. **Performance Optimization**
    - Implement caching mechanisms for frequently used agent responses
    - Optimize agent initialization and warm-up procedures
@@ -197,6 +213,7 @@ This document tracks the progress of agent system development for the financial 
 - Related to: [Agent Architecture Document](06_agent_architecture.md)
 - Related to: [AI-Centric Architecture Document](01_ai_centric_architecture.md)
 - Related to: [Business Operations Document](03_business_operations.md) - Agent Monetization Section
+- Related to: [Calculation Agent Integration Plan](16_calculation_agent_integration.md) - Detailed implementation roadmap
 - Code References: All files in `src/agents/` directory
 
 ## Last Updated

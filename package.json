@@ -9,6 +9,8 @@
     "dev": "NODE_ENV=development electron src/main.js",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:db": "node src/core/services/database.service.test.js",
+    "example:vector": "node src/core/services/vector.operations.example.js",
     "build": "electron-builder",
     "dist": "electron-builder --mac --win --linux"
   },
@@ -27,12 +29,14 @@
     "@langchain/core": "^0.3.68",
     "@langchain/openai": "^0.6.7",
     "@langchain/textsplitters": "^0.1.0",
+    "@supabase/supabase-js": "^2.55.0",
     "axios": "^1.11.0",
     "electron": "^13.1.7",
     "knex": "^0.95.11",
     "langchain": "^0.3.30",
     "lodash": "^4.17.21",
     "paypal-rest-sdk": "^1.8.1",
+    "pg": "^8.16.3",
     "sqlite3": "^5.0.2",
     "stripe": "^8.174.0",
     "uuid": "^11.1.0"
