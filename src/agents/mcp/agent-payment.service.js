@@ -1,5 +1,8 @@
 // AI Agent Payment Service for Financial Forecasting Application
 
+// Import PaymentService if needed
+import PaymentService from '../../billing/payments/payment.service.js';
+
 class AgentPaymentService {
     constructor(config, paymentService) {
         this.config = config;
@@ -316,4 +319,4 @@ class AgentPaymentService {
     }
 }
 
-module.exports = AgentPaymentService;
+export default AgentPaymentService;

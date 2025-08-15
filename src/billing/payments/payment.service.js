@@ -1,10 +1,12 @@
 // Payment Service for Financial Forecasting Application
+import stripe from 'stripe';
+import paypal from 'paypal-rest-sdk';
 
 class PaymentService {
     constructor(config) {
         this.config = config;
-        this.stripe = require('stripe')(config.payment.gateways.stripe.secretKey);
-        this.paypal = require('paypal-rest-sdk');
+        this.stripe = stripe(config.payment.gateways.stripe.secretKey);
+        this.paypal = paypal;
         this.setupPayPal();
     }
 
@@ -250,4 +252,4 @@ class PaymentService {
     }
 }
 
-module.exports = PaymentService;
+export default PaymentService;

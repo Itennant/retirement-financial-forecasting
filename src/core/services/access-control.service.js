@@ -1,5 +1,8 @@
 // Access Control Service for Financial Forecasting Application
 
+// Import PaymentService if needed
+import PaymentService from '../../billing/payments/payment.service.js';
+
 class AccessControlService {
     constructor(paymentService, config) {
         this.paymentService = paymentService;
@@ -197,4 +200,4 @@ class AccessControlService {
     }
 }
 
-module.exports = AccessControlService;
+export default AccessControlService;
